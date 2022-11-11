@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+  <title>Скрипник ПІ 19-01</title>
+</head>
+<body>
+  <div class="cont">
+    <h2>Заголовок 1</h2>
+<p>Осінь прийшла, чарівниця осінь! Птахи турбуються, нервують, коли-неколи щось скрикують. Час їм у далеку дорогу збиратися. А жовтогаряча,
+    розцяцькована безліччю барв осінь уже їде на рудому коні. Десь-не-десь стоять
+    ніжно-бурштинові берези, коричнево-жовті шати приміряють верби, міддю
+    переливаються дуби… Осінь, чарівниця кольорів, і вересень, її вправний учень,
+    швидко малюють декорації до прощального грандіозного карнавалу природи,
+    чарівного балу падолисту, увертюра якого вже бринить у повітрі.</p>
+<h2>Заголовок 2</h2>
+<p>І раптом літо, згадавши, як добре йому було, прокидається з невчасно
+    розпочатої сплячки, розливає сонце над нивами та лісами. І спалахує навколо
+    бабине літо! Бузкова герань, гнучкі петрові батоги, жовті кульбабки, білосніжні
+    ромашки – усе знову квітне, сподіваючись на тепло. Удруге вбирається у
+    весільний одяг глуха кропива, червоніють навіть духмяні сунички. Небеса,
+    осяяні яскравим холодним промінням, низько схиляються до справжніх осінніх
+    квітів: жоржин, айстр, чорнобривців, сальвій.</p>
+<h2>Заголовок 3</h2>
+<p>Вони будуть стояти до
+    останнього, закриваючись пелюстками від перших, ще не дуже жорстоких
+    морозів. Але це буде за кілька днів, усього-на-всього кілька днів, а зараз –
+    бабине літо! Знову замайоріли в повітрі метелики, знову гудуть джмелі, знову
+    снують до квіток ніби і не стомлені працею бджоли</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+ 
+<div class="img_and_btn">
+  <img src="https://ukr-prokat.com/wp-content/uploads/2020/08/ivano-frankivsk.jpg" class="image"></img>
+  <button class="btn" id="start">Start</button>
+</div>
+</div>
+
+<script>
+const paragraph = document.querySelectorAll("p");
+const headline = document.querySelectorAll("h2");
+const btnChangeTable = document.getElementById("start");
+const table = document.querySelector("table");
+
+btnChangeTable.addEventListener("click", () => {
+  const rows = table.tBodies[0].rows;
+
+  for (let i = 0; i < rows.length; i++) {
+    rows[i].cells[1].insertAdjacentElement("afterbegin", paragraph[i]);
+  }
+
+  for (let i = 0; i < rows.length; i++) {
+    rows[i].cells[0].insertAdjacentElement("afterbegin", headline[i]);
+  }
+
+});
+</script>
+
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p,h2 {
+  padding: 10px;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 99%;
+  margin: 10px;
+}
+
+td {
+  width: 200px;
+  border: 3px solid black;
+  text-align: center;
+  padding: 8px;
+}
+.img_and_btn {
+  display: flex;
+  align-items: flex-end;
+  width: 400px;
+  margin: 0 auto;
+}
+.image {
+  display: block;
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 18px;
+}
+.btn {
+  width: 125px;
+  height: 45px;
+}
+</style>
+</body>
+</html>
